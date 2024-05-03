@@ -5,15 +5,18 @@
 }
 
 body {
-    background-color: lightgray;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: white;
+    font-family: "Reddit Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
     min-height: 100vh;
     line-height: 1.5rem;
 }
 
 .grid-container {
     display: grid;
-    grid-template-rows: 100px 3rem auto 100px;
+    grid-template-rows: 3rem 3rem auto 50px;
     grid-template-columns: 4fr 1fr;
     grid-template-areas:
         "header  header"
@@ -26,13 +29,18 @@ body {
     grid-area: header;
     display: flex;
     background-color: #1f4489;
-    align-items: center; 
+    align-items: center;
     justify-content: center;
 }
 
-.grid-container .header h1{
-    color: white;
-    font-size:3rem;
+.grid-container .header p{
+    color: #fff200;
+    font-size: 2em;
+}
+
+.grid-container .header h1 {
+    color: #fff200;
+    font-size: 3rem;
 }
 
 .grid-container .navbar {
@@ -45,7 +53,7 @@ body {
 }
 
 .grid-container .navbar a {
-    color: #dfbf84;
+    color: #fff200;
     text-decoration: none;
     text-transform: uppercase;
     border-radius: 5px;
@@ -59,19 +67,29 @@ body {
 
 .grid-container .sidebar {
     grid-area: sidebar;
+    background-color:#4481f3;
 }
 
 .grid-container .main {
     grid-area: main;
+    padding: 50px;
+    background-color: white;
 }
 
 .grid-container .footer {
     grid-area: footer;
+    padding: 15px;
+    color: #fff200;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content:space-between;
     background-color: #1f4489;
     align-items: center;
 }
 
-
+.grid-container .footer a {
+    color: #fff200;
+}
 
 @media screen and (max-width:992px) {
     .grid-container {
@@ -98,7 +116,7 @@ body {
 
     .grid-container .navbar {
         flex-direction: column;
-        justify-content:center;
-        
+        justify-content: center;
+
     }
 }
