@@ -1,0 +1,137 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: white;
+    font-family: "Reddit Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    min-height: 100vh;
+    line-height: 1.5rem;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-rows: 3rem 3rem auto 50px;
+    grid-template-columns: 4fr 1fr;
+    grid-template-areas:
+        "header  header"
+        "navbar  navbar "
+        "main    sidebar"
+        "footer  footer";
+}
+
+.grid-container .header {
+    grid-area: header;
+    display: flex;
+    background-color: #1f4489;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid-container .header p {
+    color: #fff200;
+    font-size: 2em;
+}
+
+.grid-container .header h1 {
+    color: #fff200;
+    font-size: 3rem;
+}
+
+.grid-container .navbar {
+    grid-area: navbar;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #1f4489;
+}
+
+.grid-container .navbar a {
+    color: #fff200;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.grid-container .navbar a:hover {
+    background-color: #03225a;
+    transition: 0.5s;
+}
+
+.grid-container .sidebar {
+    grid-area: sidebar;
+    background-color: #4481f3;
+}
+
+.grid-container .main {
+    grid-area: main;
+    background-color: white;
+}
+
+.side-flex,
+.main-flex {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+
+.grid-container .footer {
+    grid-area: footer;
+    padding: 15px;
+    color: #fff200;
+    display: flex;
+    justify-content: space-between;
+    background-color: #1f4489;
+    align-items: center;
+}
+
+.grid-container .footer a {
+    color: #fff200;
+}
+
+.grid-nosotros {
+    display: grid;
+    grid-template-rows: 3rem 3rem auto 50px;
+    grid-template-areas:
+        "header  "
+        "navbar   "
+        "main    "
+        "footer  ";
+}
+
+@media screen and (max-width:992px) {
+    .grid-container {
+        grid-template-rows: 50px 3rem auto 100px;
+        grid-template-columns: 3fr 2fr;
+        grid-template-areas:
+            "header     header"
+            "navbar     navbar"
+            "main       sidebar"
+            "footer     footer";
+    }
+}
+
+@media screen and (max-width:576px) {
+    .grid-container {
+        grid-template-rows: 50px 150px auto 50px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "header     header"
+            "navbar     navbar"
+            "main       sidebar"
+            "footer     footer";
+    }
+
+    .grid-container .navbar {
+        flex-direction: column;
+        justify-content: center;
+
+    }
+}
