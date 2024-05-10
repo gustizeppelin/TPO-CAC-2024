@@ -31,6 +31,7 @@ body {
     background-color: #1f4489;
     align-items: center;
     justify-content: center;
+
 }
 
 .grid-container .header p {
@@ -50,6 +51,8 @@ body {
     align-items: center;
     justify-content: space-evenly;
     background-color: #1f4489;
+    position: sticky;
+    top: 0;
 }
 
 .grid-container .navbar a {
@@ -96,14 +99,27 @@ body {
     color: #fff200;
 }
 
-.grid-nosotros {
-    display: grid;
-    grid-template-rows: 3rem 3rem auto 50px;
-    grid-template-areas:
-        "header  "
-        "navbar   "
-        "main    "
-        "footer  ";
+.galeria {
+    display: flex;
+    margin: 5px;
+    padding: 15px;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: lightsteelblue;
+}
+
+.galeria .descripcion {
+    display: flex;
+    flex-direction: column;
+    padding-left: 15px;
+}
+
+img {
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 160px;
+    height: 100%;
+    object-fit: cover;
 }
 
 @media screen and (max-width:992px) {
