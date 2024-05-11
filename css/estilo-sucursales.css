@@ -1,0 +1,119 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: white;
+    font-family: "Reddit Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    min-height: 100vh;
+    line-height: 1.5rem;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-rows: 3rem 3rem auto 50px;
+    grid-template-areas:
+        "header"
+        "navbar"
+        "main"
+        "footer";
+}
+
+.grid-container .header {
+    grid-area: header;
+    display: flex;
+    background-color: #1f4489;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid-container .header p {
+    color: #fff200;
+    font-size: 2em;
+}
+
+.grid-container .header h1 {
+    color: #fff200;
+    font-size: 3rem;
+}
+
+.grid-container .navbar {
+    grid-area: navbar;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #1f4489;
+    position: sticky;
+    top: 0;
+}
+
+.grid-container .navbar a {
+    color: #fff200;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.grid-container .navbar a:hover {
+    background-color: #03225a;
+    transition: 0.5s;
+}
+
+.grid-container .banner {
+    display: grid;
+    place-items: center;
+    margin: 20px;
+}
+
+.sucursales{
+    display: grid;
+    place-items: center;
+}
+
+.sucursal {
+    display: flex;
+    max-width: 600px;
+    justify-content: flex-start;
+    margin: 5px;
+    padding: 15px;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: lightsteelblue;
+}
+
+
+.sucursal p {
+    padding: 10px 0;
+    margin: 5px;
+}
+
+.sucursal h2, h3 {
+    text-transform: uppercase;
+    margin: 5px;
+}
+
+.sucursal iframe {
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.grid-container .footer {
+    grid-area: footer;
+    padding: 15px;
+    color: #fff200;
+    display: flex;
+    justify-content: space-between;
+    background-color: #1f4489;
+    align-items: center;
+}
+
+.grid-container .footer a {
+    color: #fff200;
+}
