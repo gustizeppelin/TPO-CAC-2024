@@ -2,14 +2,19 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css\estilo_sucursales.css">
     <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Reddit+Sans:ital,wght@0,200..900;1,200..900&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/abdf63f7ce.js" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sucursales</title>
     <link rel="icon" href="img/icon.ico">
 </head>
 
-<body>
+<body class="grid-container">
 
     <header class="header">
         <p class="title"><span><i class="fa-solid fa-ticket fa-2xl"></i></span> Movies</p>
@@ -22,55 +27,88 @@
     </nav>
 
     <main>
+        <div class="banner">
+            <h1>¡visitanos en cualquiera de nustras sucursales!</h1>
+        </div>
 
-        <section class="banner">
-            <div>
-                <h1>¡visitanos en cualquiera de nustras sucursales!</h1>
-                <h1>¿Sabias que estamos en todo el pais? encontra la mas cercana.</h1>
-            </div>
-        </section>
-
-        <section class="sucursales">
+        <div class="sucursales">
 
             <div class="sucursal">
-                <div>
-                    <h2>cine localidad</h2>
-                    <p>direccion</p>
-                    <p>horario atencion</p>
+                <div class="informacion">
+                    <h2>cine Palermo</h2>
+                    <p>Beruti 3399, Cdad. Autónoma de Buenos Aires</p>
+                    <h3>Lunes a Viernes</h3>
+                    <p>9:00hs a 23:00hs</p>
+                    <h3>Fin de semana y feriados</h3>
+                    <p>10:00hs a 1:00hs</p>
                 </div>
-                
+
                 <div>
                     <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3290.385564041941!2d-58.87514285883528!3d-34.442359290458484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bc9dec9a68096b%3A0x12ffb8fe9f873998!2sPilar%20Walk!5e0!3m2!1ses!2sar!4v1714802936874!5m2!1ses!2sar"
-                        width="250" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d420707.5750495568!2d-58.76928725428148!3d-34.53385383467781!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca821220477f%3A0x22f851827c26991e!2sCinemark%20Palermo!5e0!3m2!1ses!2sar!4v1715445265169!5m2!1ses!2sar"
+                        width="250" height="250" allowfullscreen="" loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade">
                     </iframe>
                 </div>
             </div>
 
             <div class="sucursal">
-                <div>
-                    <h2>cine localidad</h2>
-                    <p>direccion</p>
-                    <p>horario atencion</p>
+                <div class="informacion">
+                    <h2>cine San Justo</h2>
+                    <p>Av. Brig. Gral. Juan Manuel de Rosas 3900, San Justo, Prov. de Buenos Aires</p>
+                    <h3>Lunes a Viernes</h3>
+                    <p>9:00hs a 23:00hs</p>
+                    <h3>Fin de semana y feriados</h3>
+                    <p>10:00hs a 1:00hs</p>
                 </div>
                 <div>
-                    <!-- inframe -->
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d419746.0118766568!2d-58.75692763514086!3d-34.72369601711262!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc621127873f1%3A0x38daf676a4c299f4!2sCinemark%20Hoyts%20San%20Justo!5e0!3m2!1ses!2sar!4v1715445615736!5m2!1ses!2sar"
+                        width="250" height="250" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
                 </div>
             </div>
 
             <div class="sucursal">
-                <div>
-                    <h2>cine localidad</h2>
-                    <p>direccion</p>
-                    <p>horario atencion</p>
+                <div class="informacion">
+                    <h2>cine San Isidro</h2>
+                    <p>Paraná 3475 Unicenter Shopping, San Isidro</p>
+                    <h3>Lunes a Viernes</h3>
+                    <p>9:00hs a 23:00hs</p>
+                    <h3>Fin de semana y feriados</h3>
+                    <p>10:00hs a 1:00hs</p>
                 </div>
+
                 <div>
-                    <!-- inframe -->
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d841666.6291904501!2d-59.49385481251802!3d-34.50896139860296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb0f1dc28900f%3A0xf720852d6dd69bcb!2sHoyts%20Unicenter%20%7C%20Cinemark%20Hoyts!5e0!3m2!1ses!2sar!4v1715445776596!5m2!1ses!2sar"
+                        width="250" height="250" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
                 </div>
             </div>
 
-        </section>
+            <div class="sucursal">
+                <div class="informacion">
+                    <h2>cine Alto Avellaneda</h2>
+                    <p>Gral. Güemes 897, Avellaneda, Provincia de Buenos Aires</p>
+                    <h3>Lunes a Viernes</h3>
+                    <p>9:00hs a 23:00hs</p>
+                    <h3>Fin de semana y feriados</h3>
+                    <p>10:00hs a 1:00hs</p>
+                </div>
+
+                <div>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d841666.6291904501!2d-59.49385481251802!3d-34.50896139860296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a33340aec25703%3A0xab18b84c236f38ff!2sCinemark%20Alto%20Avellaneda!5e0!3m2!1ses!2sar!4v1715448071598!5m2!1ses!2sar"
+                        width="250" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+
+        </div>
 
     </main>
 
