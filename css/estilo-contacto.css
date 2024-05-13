@@ -1,13 +1,8 @@
-body {
-    background-color: white;
-    font-family: "Reddit Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    min-height: 100vh;
-    line-height: 1.5rem;
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
-
 .container {
     max-width: 500px;
     margin: 50px auto;
@@ -17,7 +12,15 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-input[type="text"], textarea {
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea,
+select {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
@@ -25,6 +28,15 @@ input[type="text"], textarea {
     border-radius: 4px;
     box-sizing: border-box;
 }
+
+.contact-methods {
+    margin-bottom: 15px;
+}
+
+.contact-methods label {
+    margin-right: 20px;
+}
+
 input[type="submit"] {
     background-color: #4caf50;
     color: white;
@@ -34,9 +46,20 @@ input[type="submit"] {
     cursor: pointer;
     font-size: 16px;
 }
+
 input[type="submit"]:hover {
     background-color: #45a049;
-}   
+}
+
+body {
+    background-color: white;
+    font-family: "Reddit Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    min-height: 100vh;
+    line-height: 1.5rem;
+}
 
 .grid-container {
     display: grid;
@@ -95,3 +118,23 @@ input[type="submit"]:hover {
     place-items: center;
     margin: 20px;
 }
+
+
+
+
+
+.grid-container .footer {
+    grid-area: footer;
+    padding: 15px;
+    color: #fff200;
+    display: flex;
+    justify-content: space-between;
+    background-color: #1f4489;
+    align-items: center;
+}
+
+.grid-container .footer a {
+    color: #fff200;
+}
+
+

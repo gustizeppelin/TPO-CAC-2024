@@ -1,13 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/estilo-contacto.css">
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Reddit+Sans:ital,wght@0,200..900;1,200..900&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/abdf63f7ce.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sucursales</title>
     <link rel="icon" href="img/icon.ico">
-    <title>Document</title>
 </head>
+
 <body class="grid-container">
+
     <header class="header">
         <p class="title"><span><i class="fa-solid fa-ticket fa-2xl"></i></span> Movies</p>
     </header>
@@ -18,21 +26,57 @@
         <a href="contacto.html">Contacto</a>
     </nav>
 
-    
-    <div class="container">
-        <h2>Formulario de Contacto</h2>
-        <form action="#" method="post">
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre.." required>
+    <main>
+        <div class="container">
+            <h2>Formulario de Contacto</h2>
+            <form id="contactForm" action="#" method="post" onsubmit="return validateForm()">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre.." required>
+        
+                <label for="email">Email:</label>
+                
+                <input type="email" id="email" name="email" placeholder="Tu email.." required>
 
-            <label for="email">Email:</label>
-            <input type="text" id="email" name="email" placeholder="Tu email.." required>
+                <br>
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje.." required></textarea>
+        
+                <label for="motivo">Motivo de Contacto:</label>
+                <select id="motivo" name="motivo" required>
+                    <option value="">Seleccione un motivo</option>
+                    <option value="consulta">Consulta</option>
+                    <option value="solicitud">Solicitud</option>
+                    <option value="queja">Queja</option>
+                    <option value="otro">Otro</option>
+                </select>
+        
+                <label>Método de Contacto preferido:</label>
+                <div class="contact-methods">
+                    <label for="emailOption"><input type="radio" id="emailOption" name="contactMethod" value="email"> Email</label>
+                    <label for="phoneOption"><input type="radio" id="phoneOption" name="contactMethod" value="teléfono"> Teléfono</label>
+                </div>
+        
+                <label for="terminos">Acepto los términos y condiciones:</label>
+                <input type="checkbox" id="terminos" name="terminos" required>
+        
+                <input type="submit" value="Enviar">
+            </form>
+        </div>
+    </main>
 
-            <label for="mensaje">Mensaje:</label>
-            <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje.." style="height:200px" required></textarea>
+    <footer class="footer">
+        <div>
+            <p>Copyright <span><i class="fa-regular fa-copyright"></i></span> 2023 &bull; Nombre del sitio &bull; Todos
+                los derechos reservados</p>
+        </div>
+        <div>
+            <a href="http://www.x.com" target="_blank"><i class="fa-brands fa-x-twitter fa-xl"></i></a>
+            <a href="http://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook fa-xl"></i></a>
+            <a href="http://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram fa-xl"></i></a>
+            <a href="+541122334455" target="_blank"><i class="fa-brands fa-whatsapp fa-xl"></i></a>
+        </div>
+    </footer>
 
-            <input type="submit" value="Enviar">
-        </form>
-    </div>
 </body>
+
 </html>
