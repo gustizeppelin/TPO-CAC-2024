@@ -7,9 +7,10 @@
     max-width: 500px;
     margin: 50px auto;
     padding: 20px;
-    background-color: #fff;
+    background-color: lightsteelblue;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* font-weight: bold; */
 }
 
 label {
@@ -61,7 +62,13 @@ body {
     line-height: 1.5rem;
 }
 
+#back{
+    background-color: #1f4489;
+    margin: 5px;
+
+}
 .grid-container {
+    
     display: grid;
     grid-template-rows: 3rem 3rem auto 50px;
     grid-template-areas:
@@ -69,19 +76,24 @@ body {
         "navbar"
         "main"
         "footer";
+    ;
 }
 
 .grid-container .header {
+    
     grid-area: header;
     display: flex;
     background-color: #1f4489;
     align-items: center;
     justify-content: center;
+    /* padding-top: 5px; */
 }
 
 .grid-container .header p {
     color: #fff200;
     font-size: 2em;
+   
+   
 }
 
 .grid-container .header h1 {
@@ -98,6 +110,7 @@ body {
     background-color: #1f4489;
     position: sticky;
     top: 0;
+    padding: auto;
 }
 
 .grid-container .navbar a {
@@ -117,6 +130,7 @@ body {
     display: grid;
     place-items: center;
     margin: 20px;
+    
 }
 
 
@@ -138,3 +152,10 @@ body {
 }
 
 
+form > label {
+    font-weight: bold;
+}
+
+#titulo{
+    text-align: center;
+}

@@ -3,6 +3,10 @@
     padding: 0;
     margin: 0;
 }
+.title{
+    padding: 10px;
+    
+}
 
 body {
     background-color: white;
@@ -12,6 +16,7 @@ body {
     font-style: normal;
     min-height: 100vh;
     line-height: 1.5rem;
+    background-color: lightsteelblue;
 }
 
 .grid-container {
@@ -31,6 +36,7 @@ body {
     background-color: #1f4489;
     align-items: center;
     justify-content: center;
+    
 }
 
 .grid-container .header p {
@@ -41,6 +47,12 @@ body {
 .grid-container .header h1 {
     color: #fff200;
     font-size: 3rem;
+}
+
+/* Agrega un margen inferior al icono en el header */
+.grid-container .header .icon {
+    margin-top: 10px;
+    margin-bottom: 10px; /* Puedes ajustar este valor según sea necesario */
 }
 
 .grid-container .navbar {
@@ -65,12 +77,10 @@ body {
     transition: 0.5s;
 }
 
-
 .grid-container .main {
     grid-area: main;
     background-color: white;
 }
-
 
 .main-flex {
     display: flex;
@@ -92,3 +102,28 @@ body {
     color: #fff200;
 }
 
+main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.about-us,
+.gallery {
+    width: 50%;
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: justify;
+}
+
+.image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-container img {
+    width: 400px;
+    height: 300px;
+    margin-bottom: 30px;
+    margin-top: 15px;
+}
