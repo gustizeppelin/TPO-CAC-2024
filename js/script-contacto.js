@@ -10,5 +10,16 @@ function validateForm() {
         return false;
     }
 
-    return true;
+    // Mostrar pop-up con un mensaje de agradecimiento
+    var mensajePopUp = '¡Gracias por contactarnos, ' + nombre + '!'+'/n Pronto nos comunicaremos';
+    alert(mensajePopUp);
+
+    //Borra los datos ingresados después y recarga la página
+    setTimeout(function() {
+        document.getElementById('contactForm').reset();
+        location.reload();
+    }, 0);
+
+    // Devuelve false para evitar que el formulario se envíe de forma tradicional
+    return false;
 }
