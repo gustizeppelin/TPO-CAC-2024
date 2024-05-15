@@ -40,7 +40,7 @@ select {
 }
 
 input[type="submit"] {
-    background-color: #4caf50;
+    background-color: black;
     color: white;
     padding: 12px 20px;
     border: none;
@@ -50,7 +50,8 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-    background-color: #45a049;
+    background-color:#1f4489;
+    color:yellow;
 }
 
 body {
@@ -166,6 +167,6 @@ form > label {
     vertical-align: middle; /* Alinear verticalmente */
 }
 
-#centrar{
-    align-items: center;
+.prueba{
+    margin-top: -2px;
 }
