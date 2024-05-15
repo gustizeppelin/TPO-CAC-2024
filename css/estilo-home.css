@@ -16,7 +16,7 @@ body {
 
 .grid-container {
     display: grid;
-    grid-template-rows: 3rem 3rem auto 50px;
+    grid-template-rows: 3em 3em auto 50px;
     grid-template-columns: 4fr 1fr;
     grid-template-areas:
         "header  header"
@@ -36,13 +36,17 @@ body {
 
 .grid-container .header p {
     color: #fff200;
-    font-size: 2em;
+    font-size: 3.5rem;
+    display: flex;
+    align-items: center;
 }
 
-.grid-container .header h1 {
-    color: #fff200;
-    font-size: 3rem;
+.header .logo{
+    width: 50px;
+    height: 50px;
 }
+
+
 
 .grid-container .navbar {
     grid-area: navbar;
@@ -78,6 +82,22 @@ body {
     background-color: white;
 }
 
+.grid-container .titulo {
+    box-sizing: border-box;
+    text-align: center;
+    padding: 15px;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.grid-container .subtitulo {
+    box-sizing: border-box;
+    padding: 5px;
+    text-align: center;
+    font-size: 1rem;
+    color: #737373;
+}
+
 .side-flex,
 .main-flex {
     display: flex;
@@ -99,8 +119,9 @@ body {
     color: #fff200;
 }
 
-.galeria {
+.pelicula {
     display: flex;
+    flex-direction: row;
     margin: 5px;
     padding: 15px;
     border: 2px solid black;
@@ -108,18 +129,24 @@ body {
     background-color: lightsteelblue;
 }
 
-.galeria .descripcion {
-    display: flex;
-    flex-direction: column;
+.pelicula .descripcion {
     padding-left: 15px;
 }
 
-img {
+.pelicula .img-galeria {
     border: 1px solid black;
     border-radius: 5px;
-    width: 160px;
+    width: 150px;
     height: 100%;
-    object-fit: cover;
+    /* object-fit: cover; */
+}
+
+.pelicula h1{
+    color: #333;
+}
+
+.pelicula p{
+    color: #444;
 }
 
 @media screen and (max-width:992px) {
