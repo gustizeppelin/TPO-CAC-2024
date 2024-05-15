@@ -17,6 +17,7 @@
 <body class="grid-container">
 
     <header class="header">
+        
         <p class="title"><span><i class="fa-solid fa-ticket fa-2xl"></i></span> Movies</p>
     </header>
     <nav class="navbar">
@@ -36,11 +37,14 @@
         
                 <label for="email">Email:</label>
                 
-                <input type="email" id="email" name="email" placeholder="Tu email.." required>
+                <input type="email" id="email" name="email" placeholder="Tu email..." required>
+                
+                <label for="email">Celular:</label>
+                <input type="number" id="celular" name="celular" placeholder="Tu celular..." required>
 
                 <br>
                 <label for="mensaje">Mensaje:</label>
-                <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje.." required></textarea>
+                <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje..." required></textarea>
         
                 <label for="motivo">Motivo de Contacto:</label>
                 <select id="motivo" name="motivo" required>
@@ -54,13 +58,14 @@
                 <label>Método de Contacto preferido:</label>
                 <div class="contact-methods">
                     <label for="emailOption"><input type="radio" id="emailOption" name="contactMethod" value="email"> Email</label>
-                    <label for="phoneOption"><input type="radio" id="phoneOption" name="contactMethod" value="teléfono"> Teléfono</label>
+                    <label for="phoneOption"><input type="radio" id="phoneOption" name="contactMethod" value="teléfono"> Celular</label>
                 </div>
-        
-                <label for="terminos">Acepto los términos y condiciones:</label>
                 <input type="checkbox" id="terminos" name="terminos" required>
+                <label for="terminos">Acepto los términos y condiciones</label>
+                <br>
+                <br>
         
-                <input type="submit" value="Enviar">
+                <input type="submit" id="centrar" value="Enviar">
             </form>
         </div>
     </main>

@@ -20,6 +20,7 @@ label {
 
 input[type="text"],
 input[type="email"],
+input[type="number"],
 textarea,
 select {
     width: 100%;
@@ -70,7 +71,7 @@ body {
 .grid-container {
     
     display: grid;
-    grid-template-rows: 3rem 3rem auto 50px;
+    grid-template-rows: 4rem 3rem auto 50px;
     grid-template-areas:
         "header"
         "navbar"
@@ -158,4 +159,13 @@ form > label {
 
 #titulo{
     text-align: center;
+}
+
+#terminos, label {
+    display: inline-block; /* Mostrar en la misma línea */
+    vertical-align: middle; /* Alinear verticalmente */
+}
+
+#centrar{
+    align-items: center;
 }
