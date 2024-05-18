@@ -14,9 +14,36 @@ body {
     line-height: 1.5rem;
 }
 
+h1 {
+    text-align: center;
+    padding: 15px;
+    font-size: 3rem;
+    color: #333;
+}
+
+h2 {
+    text-align: center;
+    padding: 10px;
+    font-size: 2rem;
+    color: #737373;
+}
+
+h3 {
+    padding: 5px;
+    font-size: 1.5rem;
+    
+}
+
+h4 {
+    font-size: 1.2rem;
+    padding: 5px;
+    color: #333;
+    text-decoration: underline;
+}
+
 .grid-container {
     display: grid;
-    grid-template-rows: 3rem 3rem auto 50px;
+    grid-template-rows: 3em 3em auto 50px;
     grid-template-columns: 4fr 1fr;
     grid-template-areas:
         "header  header"
@@ -25,26 +52,27 @@ body {
         "footer  footer";
 }
 
-.grid-container .header {
+.header {
     grid-area: header;
     display: flex;
     background-color: #1f4489;
     align-items: center;
     justify-content: center;
-
 }
 
-.grid-container .header p {
+.header>p {
     color: #fff200;
-    font-size: 2em;
+    font-size: 3.5rem;
+    display: flex;
+    align-items: center;
 }
 
-.grid-container .header h1 {
-    color: #fff200;
-    font-size: 3rem;
+.header .logo {
+    width: 50px;
+    height: 50px;
 }
 
-.grid-container .navbar {
+.navbar {
     grid-area: navbar;
     display: flex;
     flex-direction: row;
@@ -55,7 +83,7 @@ body {
     top: 0;
 }
 
-.grid-container .navbar a {
+.navbar>a {
     color: #fff200;
     text-decoration: none;
     text-transform: uppercase;
@@ -63,19 +91,26 @@ body {
     padding: 5px 10px;
 }
 
-.grid-container .navbar a:hover {
+.navbar>a:hover {
     background-color: #03225a;
     transition: 0.5s;
 }
 
-.grid-container .sidebar {
+.sidebar {
     grid-area: sidebar;
     background-color: #4481f3;
 }
 
-.grid-container .main {
+.main {
     grid-area: main;
     background-color: white;
+}
+
+.titulo-sidebar>h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #fff200;
+    padding: 10px;
 }
 
 .side-flex,
@@ -85,7 +120,7 @@ body {
     padding: 15px;
 }
 
-.grid-container .footer {
+.footer {
     grid-area: footer;
     padding: 15px;
     color: #fff200;
@@ -95,12 +130,13 @@ body {
     align-items: center;
 }
 
-.grid-container .footer a {
+.footer>a {
     color: #fff200;
 }
 
-.galeria {
+.pelicula {
     display: flex;
+    flex-direction: row;
     margin: 5px;
     padding: 15px;
     border: 2px solid black;
@@ -108,18 +144,26 @@ body {
     background-color: lightsteelblue;
 }
 
-.galeria .descripcion {
-    display: flex;
-    flex-direction: column;
+.pelicula .descripcion {
     padding-left: 15px;
 }
 
-img {
+.pelicula .img-galeria {
     border: 1px solid black;
     border-radius: 5px;
-    width: 160px;
+    width: 150px;
     height: 100%;
-    object-fit: cover;
+}
+
+.pelicula>p {
+    color: #444;
+}
+
+iframe {
+    border: none;
+    border-radius: 5px;
+    width: 350px;
+    height: 200px;
 }
 
 @media screen and (max-width:992px) {
