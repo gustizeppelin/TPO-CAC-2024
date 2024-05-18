@@ -12,7 +12,7 @@ function validateForm() {
     }
 
     // Mostrar pop-up con un mensaje de agradecimiento
-    var mensajePopUp = '¡Gracias por contactarnos, ' + nombre + '!'+'/n Pronto nos comunicaremos';
+    var mensajePopUp = '¡Gracias por contactarnos, ' + nombre + '!'+' Pronto nos comunicaremos';
     alert(mensajePopUp);
 
     //Borra los datos ingresados después y recarga la página
