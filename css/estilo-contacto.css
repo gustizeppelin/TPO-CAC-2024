@@ -1,0 +1,172 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: lightsteelblue;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* font-weight: bold; */
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.contact-methods {
+    margin-bottom: 15px;
+}
+
+.contact-methods label {
+    margin-right: 20px;
+}
+
+input[type="submit"] {
+    background-color: black;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+input[type="submit"]:hover {
+    background-color:#1f4489;
+    color:yellow;
+}
+
+body {
+    background-color: white;
+    font-family: "Reddit Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    min-height: 100vh;
+    line-height: 1.5rem;
+}
+
+#back{
+    background-color: #1f4489;
+    margin: 5px;
+
+}
+.grid-container {
+    
+    display: grid;
+    grid-template-rows: 4rem 3rem auto 50px;
+    grid-template-areas:
+        "header"
+        "navbar"
+        "main"
+        "footer";
+    ;
+}
+
+.grid-container .header {
+    
+    grid-area: header;
+    display: flex;
+    background-color: #1f4489;
+    align-items: center;
+    justify-content: center;
+    /* padding-top: 5px; */
+}
+
+.grid-container .header p {
+    color: #fff200;
+    font-size: 2em;
+   
+   
+}
+
+.grid-container .header h1 {
+    color: #fff200;
+    font-size: 3rem;
+}
+
+.grid-container .navbar {
+    grid-area: navbar;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #1f4489;
+    position: sticky;
+    top: 0;
+    padding: auto;
+}
+
+.grid-container .navbar a {
+    color: #fff200;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.grid-container .navbar a:hover {
+    background-color: #03225a;
+    transition: 0.5s;
+}
+
+.grid-container .banner {
+    display: grid;
+    place-items: center;
+    margin: 20px;
+    
+}
+
+
+
+
+
+.grid-container .footer {
+    grid-area: footer;
+    padding: 15px;
+    color: #fff200;
+    display: flex;
+    justify-content: space-between;
+    background-color: #1f4489;
+    align-items: center;
+}
+
+.grid-container .footer a {
+    color: #fff200;
+}
+
+
+form > label {
+    font-weight: bold;
+}
+
+#titulo{
+    text-align: center;
+}
+
+#terminos, label {
+    display: inline-block; /* Mostrar en la misma línea */
+    vertical-align: middle; /* Alinear verticalmente */
+}
+
+.prueba{
+    margin-top: -2px;
+}

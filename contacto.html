@@ -1,39 +1,89 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+    <link rel="stylesheet" href="css/estilo-contacto.css">
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/contacto.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Reddit+Sans:ital,wght@0,200..900;1,200..900&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/abdf63f7ce.js" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Descripción de Película</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-        }
-        .container {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        h1 {
-            color: #333;
-        }
-        p {
-            color: #666;
-        }
-    </style>
+    <title>Concato</title>
+    <link rel="icon" href="img/icon.ico">
 </head>
-<body>
-    <div class="container">
-        <h1>Nombre de la Película</h1>
-        <img src="img/Dune.webp" alt="dune">
-        <p><strong>Género:</strong> Acción, Aventura, Ciencia Ficción</p>
-        <p><strong>Director:</strong> Nombre del Director</p>
-        <p><strong>Reparto:</strong> Actor 1, Actriz 1, Actor 2, etc.</p>
-        <p><strong>Fecha de Lanzamiento:</strong> 14 de Mayo de 2024</p>
-        <p><strong>Duración:</strong> 2 horas y 30 minutos</p>
-        <p><strong>Clasificación:</strong> PG-13 (Recomendada para mayores de 13 años)</p>
-        <p><strong>Sinopsis:</strong> Breve descripción de la trama de la película.</p>
-    </div>
+
+<body class="grid-container">
+
+    <header class="header">
+        
+        <p class="title"><span><i class="fa-solid fa-ticket fa-2xl"></i></span> Movies</p>
+    </header>
+    <nav class="navbar">
+        <a href="home.html">Home</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="sucursales.html">Sucursales</a>
+        <a href="contacto.html">Contacto</a>
+    </nav>
+
+    <main>
+        <div class="container">
+            <h2 id="titulo">Formulario de Contacto</h2>
+            <br>
+            <form id="contactForm" action="#" method="post" onsubmit="return validateForm()">
+                <label for="nombre"><b>Nombre:</b></label>
+                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre..">
+        
+                <label for="email">Email:</label>
+                
+                <input type="email" id="email" name="email" placeholder="Tu email...">
+                
+                <label for="email">Celular:</label>
+                <input type="number" id="celular" name="celular" placeholder="Tu celular...">
+
+                <br>
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje..."></textarea>
+        
+                <label for="motivo">Motivo de Contacto:</label>
+                <select id="motivo" name="motivo">
+                    <option value="">Seleccione un motivo</option>
+                    <option value="consulta">Consulta</option>
+                    <option value="solicitud">Solicitud</option>
+                    <option value="queja">Queja</option>
+                    <option value="otro">Otro</option>
+                </select>
+        
+                <label>Método de Contacto preferido:</label>
+                <div class="contact-methods">
+                    <label for="emailOption"><input type="radio" id="emailOption" name="contactMethod" value="email"> Email</label>
+                    <label for="phoneOption"><input type="radio" id="phoneOption" name="contactMethod" value="teléfono"> Celular</label>
+                </div>
+                <input type="checkbox" id="aline" name="terminos" class="prueba" required>
+                <label for="terminos" id="aline">Acepto los términos y condiciones</label>
+                <br>
+                <br>
+        
+                <input type="submit" id="centrar" value="Enviar">
+            </form>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div>
+            <p>Copyright <span><i class="fa-regular fa-copyright"></i></span> 2023 &bull; Nombre del sitio &bull; Todos
+                los derechos reservados</p>
+        </div>
+        <div>
+            <a href="http://www.x.com" target="_blank"><i class="fa-brands fa-x-twitter fa-xl"></i></a>
+            <a href="http://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook fa-xl"></i></a>
+            <a href="http://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram fa-xl"></i></a>
+            <a href="+541122334455" target="_blank"><i class="fa-brands fa-whatsapp fa-xl"></i></a>
+        </div>
+    </footer>
+    <script src="js/script-contacto.js"></script>
+
 </body>
+
 </html>
