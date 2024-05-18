@@ -43,7 +43,7 @@ h4 {
 
 .grid-container {
     display: grid;
-    grid-template-rows: 3em 3em auto 50px;
+    grid-template-rows: 4em 3em auto 50px;
     grid-template-columns: 4fr 1fr;
     grid-template-areas:
         "header  header"

@@ -3,9 +3,10 @@
     padding: 0;
     margin: 0;
 }
-.title{
+
+.title {
     padding: 10px;
-    
+
 }
 
 body {
@@ -21,7 +22,7 @@ body {
 
 .grid-container {
     display: grid;
-    grid-template-rows: 3rem 3rem auto 50px;
+    grid-template-rows: 4rem 3rem auto 50px;
     /* grid-template-columns: 4fr 1fr; */
     grid-template-areas:
         "header  "
@@ -30,29 +31,24 @@ body {
         "footer  ";
 }
 
-.grid-container .header {
+.header {
     grid-area: header;
     display: flex;
     background-color: #1f4489;
     align-items: center;
     justify-content: center;
-    
 }
 
-.grid-container .header p {
+.header>p {
     color: #fff200;
-    font-size: 2em;
+    font-size: 3.5rem;
+    display: flex;
+    align-items: center;
 }
 
-.grid-container .header h1 {
-    color: #fff200;
-    font-size: 3rem;
-}
-
-/* Agrega un margen inferior al icono en el header */
-.grid-container .header .icon {
-    margin-top: 10px;
-    margin-bottom: 10px; /* Puedes ajustar este valor según sea necesario */
+.header .logo {
+    width: 50px;
+    height: 50px;
 }
 
 .grid-container .navbar {

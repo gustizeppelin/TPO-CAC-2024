@@ -17,8 +17,9 @@
 <body class="grid-container">
 
     <header class="header">
-        
-        <p class="title"><span><i class="fa-solid fa-ticket fa-2xl"></i></span> Movies</p>
+        <p class="title"><span>
+                <img class="logo" src="img/palomitas-de-maiz.png" alt="icono">
+            </span> Movies</p>
     </header>
     <nav class="navbar">
         <a href="home.html">Home</a>
@@ -34,18 +35,18 @@
             <form id="contactForm" action="#" method="post" onsubmit="return validateForm()">
                 <label for="nombre"><b>Nombre:</b></label>
                 <input type="text" id="nombre" name="nombre" placeholder="Tu nombre..">
-        
+
                 <label for="email">Email:</label>
-                
+
                 <input type="email" id="email" name="email" placeholder="Tu email...">
-                
+
                 <label for="email">Celular:</label>
                 <input type="number" id="celular" name="celular" placeholder="Tu celular...">
 
                 <br>
                 <label for="mensaje">Mensaje:</label>
                 <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje..."></textarea>
-        
+
                 <label for="motivo">Motivo de Contacto:</label>
                 <select id="motivo" name="motivo">
                     <option value="">Seleccione un motivo</option>
@@ -54,17 +55,19 @@
                     <option value="queja">Queja</option>
                     <option value="otro">Otro</option>
                 </select>
-        
+
                 <label>Método de Contacto preferido:</label>
                 <div class="contact-methods">
-                    <label for="emailOption"><input type="radio" id="emailOption" name="contactMethod" value="email"> Email</label>
-                    <label for="phoneOption"><input type="radio" id="phoneOption" name="contactMethod" value="teléfono"> Celular</label>
+                    <label for="emailOption"><input type="radio" id="emailOption" name="contactMethod" value="email">
+                        Email</label>
+                    <label for="phoneOption"><input type="radio" id="phoneOption" name="contactMethod" value="teléfono">
+                        Celular</label>
                 </div>
                 <input type="checkbox" id="aline" name="terminos" class="prueba" required>
                 <label for="terminos" id="aline">Acepto los términos y condiciones</label>
                 <br>
                 <br>
-        
+
                 <input type="submit" id="centrar" value="Enviar">
             </form>
         </div>
@@ -72,7 +75,7 @@
 
     <footer class="footer">
         <div>
-            <p>Copyright <span><i class="fa-regular fa-copyright"></i></span> 2023 &bull; Nombre del sitio &bull; Todos
+            <p>Copyright <span><i class="fa-regular fa-copyright"></i></span> 2024 &bull; Movies &bull; Todos
                 los derechos reservados</p>
         </div>
         <div>
