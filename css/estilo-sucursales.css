@@ -65,6 +65,8 @@ body {
 
 .grid-container .navbar a:hover {
     background-color: #03225a;
+    box-shadow: 1px 1px 2px 1px black;
+
     transition: 0.5s;
 }
 
@@ -85,7 +87,8 @@ body {
     justify-content: flex-start;
     margin: 5px;
     padding: 15px;
-    border: 2px solid black;
+    /* border: 2px solid black; */
+    box-shadow: 2px 2px 2px 1px black;
     border-radius: 5px;
     background-color: lightsteelblue;
 }

@@ -4,11 +4,6 @@
     margin: 0;
 }
 
-.title {
-    padding: 10px;
-
-}
-
 body {
     background-color: white;
     font-family: "Reddit Sans", sans-serif;
@@ -23,7 +18,6 @@ body {
 .grid-container {
     display: grid;
     grid-template-rows: 4rem 3rem auto 50px;
-    /* grid-template-columns: 4fr 1fr; */
     grid-template-areas:
         "header  "
         "navbar   "
@@ -39,7 +33,7 @@ body {
     justify-content: center;
 }
 
-.header>p {
+.header p {
     color: #fff200;
     font-size: 3.5rem;
     display: flex;
@@ -51,16 +45,17 @@ body {
     height: 50px;
 }
 
-.grid-container .navbar {
-    grid-area: navbar;
+.navbar {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
     background-color: #1f4489;
+    position: sticky;
+    top: 0;
 }
 
-.grid-container .navbar a {
+.navbar a {
     color: #fff200;
     text-decoration: none;
     text-transform: uppercase;
@@ -68,13 +63,14 @@ body {
     padding: 5px 10px;
 }
 
-.grid-container .navbar a:hover {
+.navbar a:hover {
     background-color: #03225a;
+    box-shadow: 1px 1px 2px 1px black;
+
     transition: 0.5s;
 }
 
-.grid-container .main {
-    grid-area: main;
+.main {
     background-color: white;
 }
 
@@ -84,8 +80,7 @@ body {
     padding: 15px;
 }
 
-.grid-container .footer {
-    grid-area: footer;
+.footer {
     padding: 15px;
     color: #fff200;
     display: flex;
@@ -94,19 +89,32 @@ body {
     align-items: center;
 }
 
-.grid-container .footer a {
+.footer a {
     color: #fff200;
 }
 
 main {
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
+    padding: 15px;
+}
+
+.about-us h2 {
+    text-align: center;
+    padding: 10px;
+    font-size: 2rem;
+    color: #333;
+}
+
+.about-us p {
+    color: #444;
+    padding: 15px;
 }
 
 .about-us,
 .gallery {
     width: 50%;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     padding: 20px;
     text-align: justify;
 }
@@ -118,8 +126,29 @@ main {
 }
 
 .image-container img {
-    width: 400px;
+    width: 500px;
     height: 300px;
-    margin-bottom: 30px;
-    margin-top: 15px;
+    margin: 10px;
+    border: 2px solid black;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 1px black;
+}
+
+.integrantes {
+    padding: 15px;
+    align-items: left;
+    background-color: #4481f3;
+    /* box-shadow: 3px 5px #1f4489; */
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 1px black;
+}
+
+.integrantes h3 {
+    color: #fff200;
+}
+
+.lista {
+    list-style: none;
+    color: #333;
+    ;
 }
