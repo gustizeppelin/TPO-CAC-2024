@@ -69,11 +69,9 @@ body {
 #back {
     background-color: #1f4489;
     margin: 5px;
-
 }
 
 .grid-container {
-
     display: grid;
     grid-template-rows: 4rem 3rem auto 50px;
     grid-template-areas:
@@ -81,7 +79,6 @@ body {
         "navbar"
         "main"
         "footer";
-    ;
 }
 
 .header {
@@ -127,7 +124,6 @@ body {
 .grid-container .navbar a:hover {
     background-color: #03225a;
     box-shadow: 1px 1px 2px 1px black;
-
     transition: 0.5s;
 }
 
@@ -137,10 +133,6 @@ body {
     margin: 20px;
 
 }
-
-
-
-
 
 .grid-container .footer {
     grid-area: footer;
@@ -155,7 +147,6 @@ body {
 .grid-container .footer a {
     color: #fff200;
 }
-
 
 form>label {
     font-weight: bold;
