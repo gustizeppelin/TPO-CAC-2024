@@ -73,7 +73,7 @@ body {
 
 .grid-container {
     display: grid;
-    grid-template-rows: 4rem 3rem auto 50px;
+    grid-template-rows: 5rem 3rem auto 50px;
     grid-template-areas:
         "header"
         "navbar"
@@ -91,14 +91,14 @@ body {
 
 .header>p {
     color: #fff200;
-    font-size: 3.5rem;
+    font-size: 5rem;
     display: flex;
     align-items: center;
 }
 
 .header .logo {
-    width: 50px;
-    height: 50px;
+    width: 80px;
+    height: 80px;
 }
 
 .grid-container .navbar {
