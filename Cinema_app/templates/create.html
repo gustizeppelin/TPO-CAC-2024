@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="post" action="/storage" enctype="multipart/form-data">
+        <input type="hidden" name="id_pelicula" value="{{ pelicula[0] if pelicula else '' }}">
+        Titulo
+        <input type="text" name="txtTitulo" id="txtTitulo" value="{{ pelicula[1] if pelicula else '' }}">
+        <br>
+        Duración
+        <input type="text" name="txtDuracion" id="txtDuracion" value="{{ pelicula[2] if pelicula else '' }}">
+        <br>
+        Año
+        <input type="text" name="txtAño" id="txtAño" value="{{ pelicula[3] if pelicula else '' }}">
+        <br>
+        <input type="submit" value="Guardar">
+    </form>
+</body>
+</html>
