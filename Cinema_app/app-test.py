@@ -54,6 +54,28 @@ def storage():
     conn.commit()
 
     return redirect("/")
+    
+@app.route("/editable2", methods=["POST"])
+def editable2():
+
+    _id_Pelicula=request.form["txtIDPelicula"]
+
+    _nombre=request.form["txtTitulo"]
+    _duracion=request.form["txtDuracion"]
+    _anio=request.form["txtAño"]
+
+    datos=(_nombre,_duracion,_anio,_id_Pelicula)
+    for dato in datos:
+        print(dato)
+
+    sql="UPDATE cinema.pelicula SET titulo=%s, duracion=%s, anio=%s WHERE pelicula.id_pelicula=%s ;"
+
+    conn=mysql.connect()
+    cursor=conn.cursor()
+    cursor.execute(sql,datos)
+    conn.commit()
+
+    return redirect("/")
 
 @app.route("/destroy/<int:id>")
 def destroy(id):
@@ -65,14 +87,14 @@ def destroy(id):
     return redirect("/")
 
 
-@app.route('/edit/<int:id>')
-def edit(id):
+@app.route('/editable/<int:id>')
+def editable(id):
     sql = "SELECT * FROM cinema.pelicula WHERE pelicula.id_pelicula = %s"
     conn = mysql.connect()
     cursor = conn.cursor()
     cursor.execute(sql, (id,))
     pelicula = cursor.fetchone()
-    return render_template("create.html", pelicula=pelicula) 
+    return render_template("editable.html", pelicula=pelicula) 
 
 if __name__=="__main__":
     app.run(debug=True, port=8055)
