@@ -13,7 +13,7 @@ mysql=MySQL() #es la conexion con la base de datos
 app.config['MYSQL_DATABASE_HOST']='localhost'
 app.config['MYSQL_DATABASE_USER']='root'
 app.config['MYSQL_DATABASE_PASSWORD']=''
-app.config['MYSQL_DATABASE_BD']='cinema'  #importante nombre de la base de datos
+app.config['MYSQL_DATABASE_BD']='cine'  #importante nombre de la base de datos
 
 mysql.init_app(app)
 # INSERT INTO `pelicula` (`id_pelicula`, `titulo`, `duracion`, `anio`) VALUES (NULL, 'Los 7 Locos', '179', '1998'), (NULL, 'Alicia', '100', '2000');
@@ -22,8 +22,8 @@ mysql.init_app(app)
 
 @app.route('/')
 def index():
-    sql="SELECT * FROM cinema.pelicula"
-    # sql="INSERT INTO `cinema`.`pelicula` (`id_pelicula`, `titulo`, `duracion`, `anio`) VALUES (NULL, 'Los 8 Locos', '1899', '1998');"
+    sql="SELECT * FROM cine.pelicula"
+    # sql="INSERT INTO `cine`.`pelicula` (`id_pelicula`, `titulo`, `duracion`, `anio`) VALUES (NULL, 'Los 8 Locos', '1899', '1998');"
     conn=mysql.connect()
     cursor=conn.cursor()
     cursor.execute(sql)
@@ -46,7 +46,7 @@ def storage():
 
     datos=(_nombre,_duracion,_anio)
 
-    sql="INSERT INTO `cinema`.`pelicula` (`id_pelicula`, `titulo`, `duracion`, `anio`) VALUES (NULL, %s, %s, %s);"
+    sql="INSERT INTO `cine`.`pelicula` (`id_pelicula`, `titulo`, `duracion`, `anio`) VALUES (NULL, %s, %s, %s);"
 
     conn=mysql.connect()
     cursor=conn.cursor()
@@ -68,7 +68,7 @@ def editable2():
     for dato in datos:
         print(dato)
 
-    sql="UPDATE cinema.pelicula SET titulo=%s, duracion=%s, anio=%s WHERE pelicula.id_pelicula=%s ;"
+    sql="UPDATE cine.pelicula SET titulo=%s, duracion=%s, anio=%s WHERE pelicula.id_pelicula=%s ;"
 
     conn=mysql.connect()
     cursor=conn.cursor()
@@ -79,7 +79,7 @@ def editable2():
 
 @app.route("/destroy/<int:id>")
 def destroy(id):
-    sql="DELETE FROM cinema.pelicula WHERE pelicula.id_pelicula = %s;"
+    sql="DELETE FROM cine.pelicula WHERE pelicula.id_pelicula = %s;"
     conn=mysql.connect()
     cursor=conn.cursor()
     cursor.execute(sql,(id)) 
@@ -89,7 +89,7 @@ def destroy(id):
 
 @app.route('/editable/<int:id>')
 def editable(id):
-    sql = "SELECT * FROM cinema.pelicula WHERE pelicula.id_pelicula = %s"
+    sql = "SELECT * FROM cine.pelicula WHERE pelicula.id_pelicula = %s"
     conn = mysql.connect()
     cursor = conn.cursor()
     cursor.execute(sql, (id,))
