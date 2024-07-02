@@ -1,24 +1,19 @@
 from flask import Flask
-from flask import render_template
+from flask import render_template, redirect, request
 from flaskext.mysql import MySQL
-from flask import request
-from flask import redirect
 
 app=Flask(__name__)#esta es la aplicación
 
 mysql=MySQL() #es la conexion con la base de datos
 
-
 #configuarion de la conexion
 app.config['MYSQL_DATABASE_HOST']='localhost'
 app.config['MYSQL_DATABASE_USER']='root'
-app.config['MYSQL_DATABASE_PASSWORD']=''
+app.config['MYSQL_DATABASE_PASSWORD']='Oshea1988!'
 app.config['MYSQL_DATABASE_BD']='cine'  #importante nombre de la base de datos
 
 mysql.init_app(app)
 # INSERT INTO `pelicula` (`id_pelicula`, `titulo`, `duracion`, `anio`) VALUES (NULL, 'Los 7 Locos', '179', '1998'), (NULL, 'Alicia', '100', '2000');
-
-
 
 @app.route('/')
 def index():
@@ -35,7 +30,6 @@ def index():
 
 @app.route('/create')
 def create():
-
     return render_template("create.html")
 
 @app.route("/storage", methods=["POST"])
