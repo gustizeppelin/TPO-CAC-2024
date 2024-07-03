@@ -14,8 +14,8 @@
         <h3>Editar datos de pelicula</h3>
         <form method="post" action="/editable2" enctype="multipart/form-data">
             <div class="mb-3">
-                <label class="form-label" for="idPelicula">ID:</label>
-                <input class="form-control" type="text" name="txtIDPelicula" disabled readonly id="idPelicula"
+                <label class="form-label" for="txtIDPelicula">ID:</label>
+                <input class="form-control" type="text" name="txtIDPelicula" readonly id="txtIDPelicula"
                     value="{{ pelicula[0] if pelicula else '' }}">
             </div>
             <div class="mb-3">

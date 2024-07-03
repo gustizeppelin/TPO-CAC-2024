@@ -9,7 +9,7 @@ mysql=MySQL() #es la conexion con la base de datos
 #configuarion de la conexion
 app.config['MYSQL_DATABASE_HOST']='localhost'
 app.config['MYSQL_DATABASE_USER']='root'
-app.config['MYSQL_DATABASE_PASSWORD']='Oshea1988!'
+app.config['MYSQL_DATABASE_PASSWORD']=''
 app.config['MYSQL_DATABASE_BD']='cine'  #importante nombre de la base de datos
 
 mysql.init_app(app)
@@ -53,7 +53,6 @@ def storage():
 def editable2():
 
     _id_Pelicula=request.form["txtIDPelicula"]
-
     _nombre=request.form["txtTitulo"]
     _duracion=request.form["txtDuracion"]
     _anio=request.form["txtAño"]
